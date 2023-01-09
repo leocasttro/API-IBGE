@@ -34,13 +34,13 @@ const SelectContry = ({selectState}) => {
       {selectState ? <select value={selectContryId} 
       onChange={selectContryUpdate} style={{width: '250px', height: '30px'}}>
         <option>
-          Selecione um estado
+          Selecione um município
         </option>
         {contry.map((contry) => (
           <option key={contry.id} value={contry.id}>{contry.nome}</option>
         ))}
       </select> : null}
-      <InfoContry selectContryId={selectContryId}/>
+      <InfoContry selectContryId={selectContryId} selectState={selectState}/>
     </div>
   )
 }

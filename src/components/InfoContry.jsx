@@ -27,23 +27,25 @@ const InfoContry = ({selectContryId}) => {
 
   return (
     <div className='containerInfo'>
+    
       <div className="info">
-        {filterData.map((mic) => (
-          <p key={mic.id}>Microrregião: {mic.municipio.microrregiao.nome}</p>
-        ))}
+      {filterData.map((mic) => (
+        <p key={mic.id}>Microrregião: {mic.municipio.microrregiao.nome}</p>
+      ))}
 
-        {filterData.map((meso) => (
-          <p key={meso.id}>Mesoregião: {meso.municipio.microrregiao.mesorregiao.nome}</p>
-        ))}
+      {filterData.map((meso) => (
+        <p key={meso.id}>Mesoregião: {meso.municipio.microrregiao.mesorregiao.nome}</p>
+      ))}
 
-        {filterData.map((UF) => (
-          <p key={UF.id}>UF: {UF.municipio.microrregiao.mesorregiao.UF.sigla}</p>
-        ))}
+      {filterData.map((UF) => (
+        <p key={UF.id}>UF: {UF.municipio.microrregiao.mesorregiao.UF.sigla}</p>
+      ))}
 
-        {filterData.map((reg) => (
-          <p key={reg.id}>Região: {reg.municipio.microrregiao.mesorregiao.UF.regiao.nome}</p>
-        ))}
-      </div>
+      {filterData.map((reg) => (
+        <p key={reg.id}>Região: {reg.municipio.microrregiao.mesorregiao.UF.regiao.nome}</p>
+      ))}
+    </div>
+
     </div>
   )
 }
